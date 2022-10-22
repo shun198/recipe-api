@@ -11,11 +11,12 @@ class UserManager(BaseUserManager):
 
     # ユーザを作成
     # extra_fieldを指定することでいちいちcreate_userを上書きせずに済む
-    #
     def create_user(self,email,password=None,**extra_field):
         if not email:
             raise ValueError("メールアドレスは必須です")
         user = self.model(email=email,**extra_field)
+        # PermissionsMixinから継承
+        # パスワードを暗号化
         user.set_password(password)
         # _create_userメソッドで使用
         # 複数DBに対応するためにself._dbをつける
