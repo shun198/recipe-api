@@ -1,0 +1,26 @@
+[
+    {
+    "model": "user.Recipe",
+        "pk":1,
+        "fields": {
+            "user":1,
+            "title":"カレーライス",
+            "description":"サイヤマンが作ったカレー",
+            "time_minutes":40,
+            "price":800,
+            "link":"https://www.youtube.com/watch?v=1qf1586YUyc"
+        }
+    },
+    {
+    "model": "user.Recipe",
+        "pk":1,
+        "fields": {
+            "user":2,
+            "title":"唐揚げ",
+            "description":"山澤さんが作った唐揚げ",
+            "time_minutes":40,
+            "price":600,
+            "link":"https://www.youtube.com/watch?v=Yb5p6gxrWb0"
+        }
+    }
+]

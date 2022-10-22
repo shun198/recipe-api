@@ -4,7 +4,10 @@ from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 # Djangoの言語を変更
 # from django.utils.translation import gettext_lazy as _
 # Register your models here.
-from user.models import User
+from user.models import (
+    User,
+    Recipe,
+)
 
 class UserAdmin(BaseUserAdmin):
     # UserAdminクラスのorderingとlist_display,fieldsetsを使用
@@ -50,4 +53,5 @@ class UserAdmin(BaseUserAdmin):
 
 # デフォルトのUserAdminクラスではなく、作成したUserAdminクラスを使用
 admin.site.register(User,UserAdmin)
+admin.site.register(Recipe)
 
