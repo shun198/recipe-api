@@ -8,7 +8,8 @@
             "description":"サイヤマンが作ったカレー",
             "time_minutes":40,
             "price":800,
-            "link":"https://www.youtube.com/watch?v=1qf1586YUyc"
+            "link":"https://www.youtube.com/watch?v=1qf1586YUyc",
+            "tags":[1,2,3]
         }
     },
     {
@@ -20,7 +21,8 @@
             "description":"山澤さんが作った唐揚げ",
             "time_minutes":40,
             "price":600,
-            "link":"https://www.youtube.com/watch?v=Yb5p6gxrWb0"
+            "link":"https://www.youtube.com/watch?v=Yb5p6gxrWb0",
+            "tags":[1,2,3]
         }
     },
     {
@@ -32,7 +34,8 @@
             "description":"サイヤマンが作ったドライカレー",
             "time_minutes":45,
             "price":700,
-            "link":"https://www.youtube.com/watch?v=VvL70eo5TUg"
+            "link":"https://www.youtube.com/watch?v=VvL70eo5TUg",
+            "tags":[1,2,3]
         }
     },
     {
@@ -44,7 +47,32 @@
             "description": "マッスルランチのプロテインオートミール",
             "time_minutes": 10,
             "price": 300,
-            "link": "https://www.youtube.com/watch?v=5v6iwgLdoBg"
+            "link": "https://www.youtube.com/watch?v=5v6iwgLdoBg",
+            "tags":[1,2,3]
+        }
+    },
+    {
+    "model": "user.Tag",
+        "pk":1,
+        "fields": {
+            "user":1,
+            "name":"サイヤマン"
+        }
+    },
+    {
+    "model": "user.Tag",
+        "pk":2,
+        "fields": {
+            "user":2,
+            "name":"山澤"
+        }
+    },
+    {
+    "model": "user.Tag",
+        "pk":3,
+        "fields": {
+            "user":3,
+            "name":"マッスルランチ"
         }
     }
 ]
