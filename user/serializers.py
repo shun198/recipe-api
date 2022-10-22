@@ -21,6 +21,22 @@ class UserSerializer(serializers.ModelSerializer):
         # UserManagerのcreate_userメソッドを使用
         return get_user_model().objects.create_user(**validated_data)
 
+    # updateメソッドをオーバーライド
+    # instanceに既存のデータ、validated_dataにputまたはpostするデータが入る
+    def update(self, instance, validated_data):
+        # validated_dataからパスワードを取り出す(Listからなくなる)
+        password = validated_data.pop("password")
+        # ModelSerializerクラスのupdateメソッドを定義(使用)
+        # 通常のoverrideだと基底クラスの処理が無効化されてしまう
+        # そのため、今回はModelSerializerのupdateメソッドを無効化せずに使用したい
+        user = super().update(instance,validated_data)
+
+        if password:
+            user.set_password(password)
+            user.save
+
+        return user
+
 
 class AuthTokenSerializer(serializers.Serializer):
     # emailとpassword用のFieldを自作
