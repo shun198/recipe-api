@@ -13,7 +13,7 @@
     },
     {
     "model": "user.Recipe",
-        "pk":1,
+        "pk":2,
         "fields": {
             "user":2,
             "title":"唐揚げ",
@@ -33,6 +33,18 @@
             "time_minutes":45,
             "price":700,
             "link":"https://www.youtube.com/watch?v=VvL70eo5TUg"
+        }
+    },
+    {
+        "model": "user.Recipe",
+        "pk": 4,
+        "fields": {
+            "user": 2,
+            "title": "オートミール",
+            "description": "マッスルランチのプロテインオートミール",
+            "time_minutes": 10,
+            "price": 300,
+            "link": "https://www.youtube.com/watch?v=5v6iwgLdoBg"
         }
     }
 ]
